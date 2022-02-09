@@ -11,6 +11,15 @@ for (const file of commandFiles){
 }
 
 client.on('ready', () => {
+    let number = 0
+    setInterval(() => {
+        const list = ["문의는 나인주안#9900으로\nGive Question to 나인주안#9900", "^도움말 or ^명령어\n^help or ^command"]
+        if(number == list.length) number = 0
+        client.user.setActivity(list[number],{
+            type:"PLAYING"
+        })
+        number++
+    }, 10000)
     console.log(`Logged in as ${client.user.tag}!`);
   });
 

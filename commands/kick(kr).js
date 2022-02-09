@@ -3,7 +3,7 @@ const client  = new Discord.Client();
 const fs = require('fs');
 
 module.exports = {
-    name: 'kick',
+    name: '킥',
     execute(message){
         if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("당신은 유저를 추방하는 권한이 없으므로 이 명령어를 쓸 수 없습니다.\n이것이 오류라고 생각한다면 어드민에게 문의하세요")
         if(message.mentions.members.first()){
