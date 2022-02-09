@@ -3,8 +3,8 @@ const client  = new Discord.Client();
 const fs = require('fs');
 
 module.exports = {
-    name: "hi!",
+    name: "구구",
     execute(message){
-        message.reply(`GuGu! Are You Hungry?`);
+        message.channel.send(`${message.author.username}님 하이! 구구~`);
     }
 }
