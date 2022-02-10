@@ -9,7 +9,11 @@ module.exports = {
         if(message.mentions.members.first()){
             try{
                 message.mentions.members.first().kick().then(()=>{
-                    return message.channel.send(`GuGu! Kick ${message.mentions.members.first()} Successfully`)
+                    const embed = new Discord.MessageEmbed()
+                    embed.setColor("#0099E1")
+                    embed.addField(`GuGu!:dove: Successful Kick!`,`:soccer:${message.mentions.members.first()} is Kicked!`)
+                    return message.channel.send(embed)
+                    //return message.channel.send(`GuGu! Kick ${message.mentions.members.first()} Successfully`)
                 }).catch((error)=>{
                     return message.channel.send(`Error Occured!\n${error}`)
                 })

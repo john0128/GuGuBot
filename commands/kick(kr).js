@@ -9,7 +9,11 @@ module.exports = {
         if(message.mentions.members.first()){
             try{
                 message.mentions.members.first().kick().then(()=>{
-                    return message.channel.send(`성공적으로 ${message.mentions.members.first()}을 추방했습니다. 구구!`)
+                    const embed = new Discord.MessageEmbed()
+                    embed.setColor("#0099E1")
+                    embed.addField(`구구!:dove: 성공적인 추방!`,`:soccer:${message.mentions.members.first()}이/가 추방당했습니다!`)
+                    return message.channel.send(embed)
+                    //return message.channel.send(`성공적으로 ${message.mentions.members.first()}을 추방했습니다. 구구!`)
                 }).catch((error)=>{
                     return message.channel.send(`에러가 발생했습니다!\n${error}`)
                 })

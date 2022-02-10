@@ -12,6 +12,10 @@ module.exports = {
       if(!User) return message.reply("유저를 찾을 수 없습니다!")
       if(User.hasPermission("BAN_MEMBERS")) return message.reply("이 유저는 차단할 수 없습니다!")
       User.ban()
-      message.Channel.send(`${User}을 성공적으로 밴했습니다. 구구!`)
+      const embed = new Discord.MessageEmbed()
+      embed.setColor("#A62019")
+      embed.addField(`구구!:dove: 성공적으로 차단되었습니다!`,`:x: ${User}이/가 차단되었습니다!`)
+      return message.channel.send(embed)
+      //message.Channel.send(`${User}을 성공적으로 밴했습니다. 구구!`)
   }
 }

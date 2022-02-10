@@ -48,3 +48,10 @@ client.on('message', msg =>{
     }
 });
 client.login(token);
+//:otter:
+//:dove:
+//:x:
+//:o:
+//:white_check_mark:
+//:nine:
+//:soccer:

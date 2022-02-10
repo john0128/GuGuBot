@@ -12,6 +12,10 @@ module.exports = {
       if(!User) return message.reply("CANNOT FIND USER")
       if(User.hasPermission("BAN_MEMBERS")) return message.reply("You Can't Ban This User!")
       User.ban()
-      message.Channel.send(`GuGu! I banned ${User} Successfully!`)
+      const embed = new Discord.MessageEmbed()
+      embed.setColor("#A62019")
+      embed.addField(`GuGu!:dove: Successful Ban!`,`:x: ${User} is Banned!`)
+      return message.channel.send(embed)
+      //message.Channel.send(`GuGu! I banned ${User} Successfully!`)
   }
 }

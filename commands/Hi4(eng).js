@@ -5,6 +5,6 @@ const fs = require('fs');
 module.exports = {
     name: "hi!",
     execute(message){
-        message.reply(`GuGu! Are You Hungry?`);
+        message.reply(`GuGu!:dove: Are You Hungry?`);
     }
 }

@@ -10,7 +10,10 @@ module.exports = {
         if(isNaN(args[0])) return message.reply("Please Enter Available Value!")
         const MessageCount = parseInt(args[0])
         message.channel.bulkDelete(MessageCount + 1).then((count) => {
-            message.reply(`GuGu! Deleted ${count.size} Messages Successfully.`)
+            const embed = new Discord.MessageEmbed()
+            embed.setColor("#00C09A")
+            embed.addField("GuGu! :dove:",`:white_check_mark: Successfully Deleted ${count.size} Messages`)
+            return message.channel.send(embed)
         }).catch((error) => {
             message.reply(`Error Occured!\n${error}`)
         })

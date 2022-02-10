@@ -5,6 +5,6 @@ const fs = require('fs');
 module.exports = {
     name: "hi",
     execute(message){
-        message.channel.send(`GuGu! Hello? ${message.author.username}`);
+        message.channel.send(`GuGu! Hello? ${message.author.username}:dove:`);
     }
 }
