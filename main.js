@@ -41,4 +41,10 @@ client.on('message', msg =>{
         msg.channel.send(`🏓Pong! ${client.ws.ping}ms`);
     }
 });
+client.on('message', msg =>{
+    if (msg.content === '^핑')
+    {
+        msg.channel.send(`🏓Pong! ${client.ws.ping}ms`);
+    }
+});
 client.login(token);
